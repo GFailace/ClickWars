@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Estourando balões</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="css/game.css">
+
+	<script src="jogo.js"></script>
+
+</head>
+
+<body onload="iniciaJogo()">
+	<section class=" container jogo">
+		<div style="float:left; width:150px; height:500px; padding: 8% 20px; background-color: rgba(255,255,255, 0.55);  margin-right: 5px;">
+			<table border="0">
+				<tr>
+					<td>
+						<img src="imagens/stormtrooper.png" width="64px" height="54px" />
+					</td>
+					<td>
+						<span id="baloes_inteiros" style="font-size: 40px;"></span>
+					</td>
+				</tr>
+			</table>
+
+			<br />
+			<table border="0">
+				<tr>
+					<td>
+						<img src="imagens/caveira.png" width="72px" height="72px"  />
+					</td>
+					<td>
+						<span id="baloes_estourados" style="font-size: 40px;"></span>
+					</td>
+				</tr>
+			</table>
+
+			<br />
+			<table border="0" style="width: 140px; height: 132px;">
+				<tr>
+					<td>
+						<img src="imagens/cronometro.png" width="72px" height="72px" />
+						<span id="cronometro" style="color: red; font-size: 30px; width: 72px; height: 64px;"></span>
+					</td>
+				</tr>
+				<tr>
+						<td>
+								<button class="voltar"><a href="index.html">Menu</a></button>
+						</td>
+					</tr>
+				
+			</table>
+
+		</div>
+
+		<div id="cenario" style="float: left; width: 600px; height: 500px;  background-position: bottom;"></div>
+
+		
+
+	</section>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

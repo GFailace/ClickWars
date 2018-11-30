@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Estourando balões</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script language='Javascript'>
+
+		function iniciaJogo() {
+			var nivel_jogo = document.getElementById('nivel_jogo').value;
+
+			window.location.href = 'jogo.html?' + nivel_jogo;
+
+		}
+	</script>
+
+</head>
+
+<body class="principal">
+	<section class="main">
+		<div class="menu">
+			<h1>Estoure os Balões</h1>
+			<h3>Para vencer o jogo você deve estourar todos os 80 balões antes do tempo acabar.</h3>
+			<p>
+				<h5>Escolha o nível de dificuldade do Jogo</h5>
+				<select id="nivel_jogo">
+					<option value="1" selected>Fácil</option>
+					<option value="2">Normal</option>
+					<option value="3">Difícil</option>
+				</select>
+				</h5>
+			</p>
+			<h5>Clique no Play para iniciar</h5>
+			<img class="play" src="imagens/play.png" onclick="iniciaJogo()" />
+		</div>
+	</section>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
