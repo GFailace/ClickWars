@@ -4,65 +4,43 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Estourando balões</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<title>Click Wars</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="shortcut icon" href="/imagens/stmt.ico">
 	<link rel="stylesheet" href="css/game.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.26.9/dist/sweetalert2.min.css'>
 
-	<script src="jogo.js"></script>
+	<script src="js/jogo.js"></script>
 
 </head>
 
 <body onload="iniciaJogo()">
-	<section class=" container jogo">
-		<div style="float:left; width:150px; height:500px; padding: 8% 20px; background-color: rgba(255,255,255, 0.55);  margin-right: 5px;">
-			<table border="0">
-				<tr>
-					<td>
-						<img src="imagens/stormtrooper.png" width="64px" height="54px" />
-					</td>
-					<td>
-						<span id="baloes_inteiros" style="font-size: 40px;"></span>
-					</td>
-				</tr>
-			</table>
+	<section class="jogo">
 
-			<br />
-			<table border="0">
-				<tr>
-					<td>
-						<img src="imagens/caveira.png" width="72px" height="72px"  />
-					</td>
-					<td>
-						<span id="baloes_estourados" style="font-size: 40px;"></span>
-					</td>
-				</tr>
-			</table>
 
-			<br />
-			<table border="0" style="width: 140px; height: 132px;">
-				<tr>
-					<td>
-						<img src="imagens/cronometro.png" width="72px" height="72px" />
-						<span id="cronometro" style="color: red; font-size: 30px; width: 72px; height: 64px;"></span>
-					</td>
-				</tr>
-				<tr>
-						<td>
-								<button class="voltar"><a href="index.html">Menu</a></button>
-						</td>
-					</tr>
-				
-			</table>
+		<div class="placar">
+
+			<img class="icone" src="imagens/stormtrooper.png" width="64px" height="54px" />
+			<span id="inteiros" style="font-size: 24px; color: white"></span>
+			<img class="icone" src="imagens/caveira.png" width="72px" height="72px" />
+			<span id="estourados" style="font-size:24px; color: white""></span>
+			<img class=" icone" src="imagens/cronometro.png" width="48px" height="48px" />
+			<span id="cronometro" style="color: red; font-size: 24px;"></span>
+			
+
 
 		</div>
 
-		<div id="cenario" style="float: left; width: 600px; height: 500px;  background-position: bottom;"></div>
-
-		
+		<div id="cenario""></div>
+		<button class=" voltar"><a href="index.html">Menu</a></button>
+		<button class="voltar"><a onclick="history.go(0)">Reiniciar!</a></button>
 
 	</section>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src='https://cdn.jsdelivr.net/npm/sweetalert2@7.26.9/dist/sweetalert2.all.min.js'></script>
 </body>
 
 </html>

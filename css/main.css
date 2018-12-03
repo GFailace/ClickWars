@@ -1,18 +1,26 @@
 *{
-    font-family: 'Source Sans Pro', sans-serif;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    font-family: 'Star Jedi', sans-serif;
 }
 
-.principal{
+@font-face{
+    font-family: Star Jedi;
+    src: url("../css/starjedi/Starjedi.ttf");
+}
+
+html{
+    
     width: 100%;
     height: 100%;
-    background: url("https://cdnb.artstation.com/p/assets/images/images/002/969/487/original/pixel-jeff-the-duel.gif");
+}
+
+body{
+    background: url("https://i.redd.it/mxvlfkj6tv301.gif");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .main{
-    margin:17% 19%;
     color: #FFF;    
 }
 
@@ -21,10 +29,8 @@
 }
 
 .menu{
-    margin:10% 19%;
-    padding: 25% 0;
+    padding: 5% 15%;
     text-align: center;
-    padding: 10px 0;
 }
 .play{
     cursor: pointer;
