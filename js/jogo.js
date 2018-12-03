@@ -31,12 +31,12 @@ function iniciaJogo(){
 	//inserindo segundos no span
 	document.getElementById('cronometro').innerHTML = tempo_segundos;
 
-	// quantidade de items
-	var qtde_items = 60;
+	// quantidade de balões
+	var qtde_items = 70;
 	
 	cria_items(qtde_items);
 
-	//imprimir qtde items inteiros
+	//imprimir qtde baloes inteiros
 	document.getElementById('inteiros').innerHTML = qtde_items;
 	document.getElementById('estourados').innerHTML = 0;
 
@@ -60,7 +60,7 @@ function contagem_tempo(segundos){
 }
 
 function remove_eventos_baloes() {
-    var i = 1; //contado para recuperar items por id
+    var i = 1; //contado para recuperar balões por id
     
     //percorre o lementos de acordo com o id e só irá sair do laço quando não houver correspondência com elemento
     while(document.getElementById('b'+i)) {
@@ -79,6 +79,7 @@ function game_over(){
 		footer: '<input type="button" value="Reiniciar!" onclick="history.go(0)" class="btn btn-lg btn-primary" /> <button class="btn btn-lg btn-primary"><a class="bt" href="index.html">Menu</a></button>',
 		showConfirmButton: false
 	})
+    /*alert('Fim de jogo, você foi humilhado pelos stormtroopers e deve se juntar a Primeira Ordem!');*/
 }
 
 
