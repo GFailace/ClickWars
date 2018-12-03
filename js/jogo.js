@@ -32,7 +32,7 @@ function iniciaJogo(){
 	document.getElementById('cronometro').innerHTML = tempo_segundos;
 
 	// quantidade de items
-	var qtde_items = 80;
+	var qtde_items = 60;
 	
 	cria_items(qtde_items);
 
