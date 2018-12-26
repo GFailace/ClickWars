@@ -10,10 +10,8 @@ if (screen.lockOrientationUniversal("portrait")) {
 
 function iniciaJogo(){
 
-	var url = window.location.search;
-	
+	var url = window.location.search;	
 	var nivel_jogo = url.replace("?", "");
-
 	var tempo_segundos = 0;
 
 	if(nivel_jogo == 1) { //1 fácil -> 120segundos
@@ -31,12 +29,12 @@ function iniciaJogo(){
 	//inserindo segundos no span
 	document.getElementById('cronometro').innerHTML = tempo_segundos;
 
-	// quantidade de balões
+	// quantidade de items
 	var qtde_items = 70;
 	
 	cria_items(qtde_items);
 
-	//imprimir qtde baloes inteiros
+	//imprimir qtde items inteiros
 	document.getElementById('inteiros').innerHTML = qtde_items;
 	document.getElementById('estourados').innerHTML = 0;
 
@@ -59,19 +57,19 @@ function contagem_tempo(segundos){
 	timerId = setTimeout("contagem_tempo("+segundos+")", 1000);
 }
 
-function remove_eventos_baloes() {
-    var i = 1; //contado para recuperar balões por id
+function remove_eventos() {
+    var i = 1; //contado para recuperar items por id
     
     //percorre o lementos de acordo com o id e só irá sair do laço quando não houver correspondência com elemento
-    while(document.getElementById('b'+i)) {
+    while(document.getElementById('it'+i)) {
         //retira o evento onclick do elemnto
-        document.getElementById('b'+i).onclick = '';
+        document.getElementById('it'+i).onclick = '';
         i++; //faz a iteração da variávei i
     }
 }
 
 function game_over(){
-	remove_eventos_baloes();
+	
 	swal({
 		type: 'error',
 		title: 'Fim de jogo, você foi humilhado pelos stormtroopers e deve se juntar a primeira ordem!',
@@ -79,6 +77,7 @@ function game_over(){
 		footer: '<input type="button" value="Reiniciar!" onclick="history.go(0)" class="btn btn-lg btn-primary" /> <button class="btn btn-lg btn-primary"><a class="bt" href="index.html">Menu</a></button>',
 		showConfirmButton: false
 	})
+	remove_eventos();
     /*alert('Fim de jogo, você foi humilhado pelos stormtroopers e deve se juntar a Primeira Ordem!');*/
 }
 
